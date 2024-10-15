@@ -5,9 +5,15 @@ using UnityEngine.UI;
 
 public class Main : MonoBehaviour
 {
-    public GameObject imageObj; //이미지
+    public GameObject imageObj;
+    public GameObject LogoImg;
+    public GameObject LogoImg2;
+    //이미지
     public Button ShowButton; //보여주기
     public Button CloseButton; //닫기
+
+    public Button first;
+    public Button second;
     public InputField inputField; // 사용자가 텍스트를 입력할 InputField
     public Text displayText;
     // Start is called before the first frame update
@@ -15,10 +21,16 @@ public class Main : MonoBehaviour
     {
         //처음에 안보이게 하는거
         imageObj.SetActive(false);
+        LogoImg.SetActive(false);
+        LogoImg2.SetActive(false);
         
         //버튼 클릭 이밴트
         ShowButton.onClick.AddListener(ShowImage);
         CloseButton.onClick.AddListener(HideImage);
+        
+        first.onClick.AddListener(firstLogo);
+        second.onClick.AddListener(secondLogo);
+        
     }
 
     void ShowImage()
@@ -26,9 +38,20 @@ public class Main : MonoBehaviour
         imageObj.SetActive(true);
     }
 
+    void firstLogo()
+    {
+        LogoImg.SetActive(true);
+        LogoImg2.SetActive(false);
+    }
+
     void HideImage()
     {
         imageObj.SetActive(false);
+    }
+    void secondLogo()
+    {
+        LogoImg.SetActive(false);
+        LogoImg2.SetActive(true);
     }
     public void ApplyText()
     {
