@@ -8,6 +8,8 @@ public class Main : MonoBehaviour
     public GameObject imageObj;
     public GameObject LogoImg;
     public GameObject LogoImg2;
+
+    public GameObject cost;
     //이미지
     public Button ShowButton; //보여주기
     public Button CloseButton; //닫기
@@ -23,6 +25,7 @@ public class Main : MonoBehaviour
         imageObj.SetActive(false);
         LogoImg.SetActive(false);
         LogoImg2.SetActive(false);
+        cost.SetActive(false);
         
         //버튼 클릭 이밴트
         ShowButton.onClick.AddListener(ShowImage);
@@ -36,6 +39,7 @@ public class Main : MonoBehaviour
     void ShowImage()
     {
         imageObj.SetActive(true);
+        cost.SetActive(true);
     }
 
     void firstLogo()
@@ -47,6 +51,9 @@ public class Main : MonoBehaviour
     void HideImage()
     {
         imageObj.SetActive(false);
+        LogoImg.SetActive(false);
+        LogoImg2.SetActive(false);
+        cost.SetActive(false);
     }
     void secondLogo()
     {
