@@ -8,6 +8,8 @@ public class Main : MonoBehaviour
     public GameObject imageObj; //이미지
     public Button ShowButton; //보여주기
     public Button CloseButton; //닫기
+    public InputField inputField; // 사용자가 텍스트를 입력할 InputField
+    public Text displayText;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +29,13 @@ public class Main : MonoBehaviour
     void HideImage()
     {
         imageObj.SetActive(false);
+    }
+    public void ApplyText()
+    {
+        // InputField에서 입력된 텍스트 가져오기
+        string userInput = inputField.text;
+
+        // Text UI에 입력된 텍스트를 표시
+        displayText.text = userInput;
     }
 }
