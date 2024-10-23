@@ -35,7 +35,6 @@ public class Main : MonoBehaviour
         
         first.onClick.AddListener(firstLogo);
         second.onClick.AddListener(secondLogo);
-        
     }
 
     void ShowImage()
