@@ -8,6 +8,7 @@ public class Main : MonoBehaviour
     public GameObject imageObj;
     public GameObject LogoImg;
     public GameObject LogoImg2;
+    public GameObject text;
 
     public GameObject cost;
     //이미지
@@ -26,6 +27,7 @@ public class Main : MonoBehaviour
         LogoImg.SetActive(false);
         LogoImg2.SetActive(false);
         cost.SetActive(false);
+        text.SetActive(false);
         
         //버튼 클릭 이밴트
         ShowButton.onClick.AddListener(ShowImage);
@@ -40,6 +42,7 @@ public class Main : MonoBehaviour
     {
         imageObj.SetActive(true);
         cost.SetActive(true);
+        text.SetActive(true);
     }
 
     void firstLogo()
@@ -54,18 +57,11 @@ public class Main : MonoBehaviour
         LogoImg.SetActive(false);
         LogoImg2.SetActive(false);
         cost.SetActive(false);
+        text.SetActive(false);
     }
     void secondLogo()
     {
         LogoImg.SetActive(false);
         LogoImg2.SetActive(true);
-    }
-    public void ApplyText()
-    {
-        // InputField에서 입력된 텍스트 가져오기
-        string userInput = inputField.text;
-
-        // Text UI에 입력된 텍스트를 표시
-        displayText.text = userInput;
     }
 }
